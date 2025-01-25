@@ -1,0 +1,16 @@
+<h1>My blog</h1>
+<div class="row">
+  <%- data.allPosts.each do |post| %>
+    <div class="col-6">
+      <div class="card">
+        <%= render Dato::ResponsiveImage.new(post.coverImage.responsiveImage), custom_css_classes: 'card-image-top' %>
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= link_to post.title, blog_post_path(post.slug) %>
+          </h5>
+          <p class="card-text"><%= post.excerpt %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

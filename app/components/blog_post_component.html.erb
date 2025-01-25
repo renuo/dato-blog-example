@@ -1,0 +1,14 @@
+<h1><%= data.post.title %></h1>
+
+<div class="d-flex">
+  <div style="width: 50px">
+    <%= render Dato::ResponsiveImage.new(data.post.author.picture.responsiveImage, custom_css_classes: 'rounded-circle', custom_img_css_classes: 'rounded-circle') %>
+  </div>
+  <span class="mr-auto"><%= data.post.author.name %></span>
+</div>
+
+<%= render Dato::ResponsiveImage.new(data.post.coverImage.responsiveImage) %>
+
+<div style="max-width: 42rem" class="mx-auto">
+  <%= render Dato::StructuredText.new(@data.post.content) %>
+</div>
