@@ -28,7 +28,7 @@ gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
 
-gem 'dato-rails', require: 'dato', github: 'renuo/dato-rails'
+gem 'dato-rails', require: 'dato'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
